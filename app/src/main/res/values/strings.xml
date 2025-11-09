@@ -3,7 +3,7 @@
     <!-- App Identity -->
     <string name="app_name">CampusExpense Manager</string>
     <string name="welcome_message">Welcome to CampusExpense Manager</string>
-    <string name="version_info">Version 1.0 - Phase 1</string>
+    <string name="version_info">Version 1.0 - Phase 2</string>
 
     <!-- Authentication -->
     <string name="login">Login</string>
@@ -39,6 +39,53 @@
     <string name="error_username_exists">Username already exists</string>
     <string name="error_session_expired">Session expired. Please login again.</string>
 
+    <!-- Expenses -->
+    <string name="expenses">Expenses</string>
+    <string name="add_expense">Add Expense</string>
+    <string name="edit_expense">Edit Expense</string>
+    <string name="delete_expense">Delete Expense</string>
+    <string name="expense_details">Expense Details</string>
+    <string name="no_expenses">No expenses yet</string>
+    <string name="tap_add_to_create_expense">Tap the + button to add your first expense</string>
+
+    <!-- Expense Fields -->
+    <string name="category">Category</string>
+    <string name="description">Description</string>
+    <string name="amount">Amount</string>
+    <string name="date">Date</string>
+    <string name="notes_optional">Notes (optional)</string>
+    <string name="select_date">Select date</string>
+    <string name="expense_icon">Expense icon</string>
+
+    <!-- Expense Messages -->
+    <string name="expense_added">Expense added successfully</string>
+    <string name="expense_updated">Expense updated successfully</string>
+    <string name="expense_deleted">Expense deleted</string>
+    <string name="undo">Undo</string>
+
+    <!-- Error Messages - Expenses -->
+    <string name="error_description_required">Description is required</string>
+    <string name="error_amount_required">Amount is required</string>
+    <string name="error_amount_must_be_positive">Amount must be greater than zero</string>
+    <string name="error_invalid_amount">Invalid amount format</string>
+    <string name="error_loading_expenses">Error loading expenses</string>
+    <string name="error_adding_expense">Error adding expense</string>
+    <string name="error_updating_expense">Error updating expense</string>
+    <string name="error_deleting_expense">Error deleting expense</string>
+    <string name="error_saving_expense">Error saving expense</string>
+
+    <!-- Filters -->
+    <string name="filter_by_category">Filter by category</string>
+    <string name="filter_by_date">Filter by date</string>
+    <string name="select_start_date">Select start date</string>
+    <string name="select_end_date">Select end date</string>
+    <string name="clear_filters">Clear filters</string>
+
+    <!-- Budget (placeholder for Phase 3) -->
+    <string name="budget">Budget</string>
+    <string name="set_budget">Set Budget</string>
+    <string name="budget_amount">Budget Amount</string>
+
     <!-- Common Actions -->
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
@@ -58,7 +105,33 @@
 
     <!-- Placeholders for future phases -->
     <string name="expense">Expense</string>
-    <string name="budget">Budget</string>
     <string name="reports">Reports</string>
     <string name="settings">Settings</string>
+    <string name="overview">Overview</string>
+
+    <!-- Expense Categories Array -->
+    <string-array name="expense_categories">
+        <item>All</item>
+        <item>Food</item>
+        <item>Transport</item>
+        <item>Shopping</item>
+        <item>Entertainment</item>
+        <item>Bills</item>
+        <item>Healthcare</item>
+        <item>Education</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Expense Categories (without "All" for add/edit) -->
+    <string-array name="expense_categories_no_all">
+        <item>Food</item>
+        <item>Transport</item>
+        <item>Shopping</item>
+        <item>Entertainment</item>
+        <item>Bills</item>
+        <item>Healthcare</item>
+        <item>Education</item>
+        <item>Other</item>
+    </string-array>
+
 </resources>
