@@ -2,7 +2,6 @@
 <!-- Empty state view for lists -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -14,8 +13,8 @@
         android:layout_height="120dp"
         android:src="@drawable/ic_placeholder_list"
         android:contentDescription="@string/no_expenses"
-        android:alpha="0.5"
-        app:tint="@color/outline_variant" />
+        android:tint="@color/outline_variant"
+        android:alpha="0.5" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,8 +30,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/tap_add_to_create_expense"
         android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-        android:textColor
-            ="@color/on_surface_variant"
+        android:textColor="@color/on_surface_variant"
         android:gravity="center" />
 
 </LinearLayout>
