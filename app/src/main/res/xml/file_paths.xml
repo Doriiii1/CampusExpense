@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- FileProvider paths for sharing CSV reports -->
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Cache directory for temporary CSV files -->
+    <cache-path name="csv_cache" path="reports/" />
 
-</PreferenceScreen>
+    <!-- Files directory (alternative) -->
+    <files-path name="csv_files" path="reports/" />
+</paths>
