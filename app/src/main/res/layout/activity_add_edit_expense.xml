@@ -106,7 +106,7 @@
                 android:src="@drawable/ic_calendar"
                 android:background="@color/primary_container"
                 android:contentDescription="@string/select_date"
-                app:tint="@color/on_primary_container" />
+                android:tint="@color/on_primary_container" />
 
         </LinearLayout>
 
