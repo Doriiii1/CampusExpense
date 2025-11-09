@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Budget dialog for Phase 3: Full implementation -->
+<!-- Placeholder dialog for Phase 3: Budget feature -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -16,70 +15,26 @@
         android:textColor="@color/on_surface"
         android:layout_marginBottom="16dp" />
 
-    <!-- Category -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/category"
-        android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
-        android:textColor="@color/on_surface" />
-
-    <Spinner
-        android:id="@+id/spinnerBudgetCategory"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/dotted_border"
-        android:padding="16dp" />
-
-    <!-- Budget Amount -->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:hint="@string/budget_amount"
-        app:boxStrokeColor="@color/primary"
-        app:prefixText="$"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editBudgetAmount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:maxLines="1"
-            android:imeOptions="actionNext" />
+            android:inputType="numberDecimal" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Threshold Percentage -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:hint="@string/threshold_percent"
-        app:boxStrokeColor="@color/primary"
-        app:helperText="@string/threshold_helper"
-        app:suffixText="%"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editThreshold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:maxLines="1"
-            android:imeOptions="actionDone" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!-- Buttons -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="end">
+        android:gravity="end"
+        android:layout_marginTop="16dp">
 
         <Button
             android:id="@+id/btnCancelBudget"
