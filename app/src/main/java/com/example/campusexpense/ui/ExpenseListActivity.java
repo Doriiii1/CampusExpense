@@ -19,9 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.campusexpense.R;
 import com.example.campusexpense.auth.AuthManager;
 import com.example.campusexpense.db.DatabaseHelper;
-import com.example.campusexpense.model.Budget;
 import com.example.campusexpense.model.Expense;
-import com.example.campusexpense.notifications.NotificationHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import java.text.SimpleDateFormat;
@@ -308,33 +306,9 @@ public class ExpenseListActivity extends AppCompatActivity {
             if (requestCode == REQUEST_ADD_EXPENSE || requestCode == REQUEST_EDIT_EXPENSE) {
                 // Reload expenses after add/edit
                 loadExpenses();
-
-                // Phase 3 Integration: Trigger budget recompute and notification (for added/edited expense)**
-            String userId = authManager.getCurrentUser();
-            if (userId != null && data != null) {
-                String category = data.getStringExtra("category"); // Assume passed from AddEditExpenseActivity**
-                if (category != null && !category.equals("All")) {
-                    // Recompute budget for this category**
-                    dbHelper.recomputeBudgetSpent(userId, category);
-
-                    // Check if budget threshold reached**
-                    Budget budget = dbHelper.getBudgetByCategory(userId, category);
-                    if (budget != null && budget.isAtThreshold()) {
-                        NotificationHelper.notifyBudgetThreshold(
-                                    this,
-                            budget.getCategory(),
-                            budget.getCurrentSpent(),
-                            budget.getLimitAmount()
-                        );
-                    }
-                } else {
-                    // Fallback: Recompute all budgets if no category passed**
-                    dbHelper.recomputeAllBudgets(userId);
-                }
             }
         }
     }
-}
 
     @Override
     protected void onResume() {
