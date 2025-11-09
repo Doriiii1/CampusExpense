@@ -3,7 +3,41 @@
     <!-- App Identity -->
     <string name="app_name">CampusExpense Manager</string>
     <string name="welcome_message">Welcome to CampusExpense Manager</string>
-    <string name="version_info">Version 1.0 - Phase 0</string>
+    <string name="version_info">Version 1.0 - Phase 1</string>
+
+    <!-- Authentication -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="welcome_back">Welcome back! Please login to continue.</string>
+    <string name="create_account">Create Account</string>
+    <string name="join_campus_expense">Join CampusExpense and track your spending</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="toggle_password_visibility">Toggle password visibility</string>
+
+    <!-- Helper Text -->
+    <string name="username_helper">Minimum 3 characters</string>
+    <string name="password_helper">Minimum 6 characters</string>
+
+    <!-- Success Messages -->
+    <string name="login_success">Login successful!</string>
+    <string name="registration_success">Registration successful! Please login.</string>
+    <string name="logout_success">Logged out successfully</string>
+
+    <!-- Error Messages - Authentication -->
+    <string name="error_username_required">Username is required</string>
+    <string name="error_username_too_short">Username must be at least 3 characters</string>
+    <string name="error_password_required">Password is required</string>
+    <string name="error_password_too_short">Password must be at least 6 characters</string>
+    <string name="error_confirm_password_required">Please confirm your password</string>
+    <string name="error_passwords_do_not_match">Passwords do not match</string>
+    <string name="error_invalid_credentials">Invalid username or password</string>
+    <string name="error_username_exists">Username already exists</string>
+    <string name="error_session_expired">Session expired. Please login again.</string>
 
     <!-- Common Actions -->
     <string name="ok">OK</string>
@@ -13,14 +47,18 @@
     <string name="edit">Edit</string>
     <string name="add">Add</string>
     <string name="close">Close</string>
+    <string name="back">Back</string>
 
     <!-- Common Labels -->
     <string name="loading">Loading…</string>
     <string name="error">Error</string>
     <string name="success">Success</string>
+    <string name="warning">Warning</string>
+    <string name="info">Information</string>
 
-    <!-- Placeholder strings for future phases -->
-    <string name="login">Login</string>
-    <string name="register">Register</string>
-    <string name="logout">Logout</string>
+    <!-- Placeholders for future phases -->
+    <string name="expense">Expense</string>
+    <string name="budget">Budget</string>
+    <string name="reports">Reports</string>
+    <string name="settings">Settings</string>
 </resources>
