@@ -14,14 +14,32 @@
         android:theme="@style/Theme.CampusExpense"
         tools:targetApi="31">
 
+        <!-- Login Activity - Entry Point -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".ui.LoginActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Register Activity -->
+        <activity
+            android:name=".ui.RegisterActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".ui.LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.LoginActivity" />
+        </activity>
+
+        <!-- Main Activity - Post-login Home -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
 
     </application>
 
