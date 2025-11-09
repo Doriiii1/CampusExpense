@@ -1,6 +1,7 @@
 package com.example.campusexpense.ui;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -282,8 +283,12 @@ public class AddEditExpenseActivity extends AppCompatActivity {
                 }
             }
 
-            // Return success
-            setResult(RESULT_OK);
+            // Phase 3 Integration: Pass category back to ExpenseListActivity for budget recompute
+            Intent resultIntent = new Intent();
+            resultIntent.putExtra("category", expense.getCategory());
+
+            // Return success with extra
+            setResult(RESULT_OK, resultIntent);
             finish();
 
         } catch (Exception e) {
