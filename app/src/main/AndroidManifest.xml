@@ -41,6 +41,27 @@
             android:name=".MainActivity"
             android:exported="false" />
 
+        <!-- Expense List Activity -->
+        <activity
+            android:name=".ui.ExpenseListActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <!-- Add/Edit Expense Activity -->
+        <activity
+            android:name=".ui.AddEditExpenseActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".ui.ExpenseListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.ExpenseListActivity" />
+        </activity>
+
     </application>
 
 </manifest>
