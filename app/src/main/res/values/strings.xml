@@ -3,122 +3,7 @@
     <!-- App Identity -->
     <string name="app_name">CampusExpense Manager</string>
     <string name="welcome_message">Welcome to CampusExpense Manager</string>
-    <string name="version_info">Version 1.0 - Phase 3</string>
-
-    <!-- Authentication -->
-    <string name="login">Login</string>
-    <string name="register">Register</string>
-    <string name="logout">Logout</string>
-    <string name="username">Username</string>
-    <string name="password">Password</string>
-    <string name="confirm_password">Confirm Password</string>
-    <string name="welcome_back">Welcome back! Please login to continue.</string>
-    <string name="create_account">Create Account</string>
-    <string name="join_campus_expense">Join CampusExpense and track your spending</string>
-    <string name="dont_have_account">Don\'t have an account?</string>
-    <string name="already_have_account">Already have an account?</string>
-    <string name="toggle_password_visibility">Toggle password visibility</string>
-
-    <!-- Helper Text -->
-    <string name="username_helper">Minimum 3 characters</string>
-    <string name="password_helper">Minimum 6 characters</string>
-
-    <!-- Success Messages -->
-    <string name="login_success">Login successful!</string>
-    <string name="registration_success">Registration successful! Please login.</string>
-    <string name="logout_success">Logged out successfully</string>
-
-    <!-- Error Messages - Authentication -->
-    <string name="error_username_required">Username is required</string>
-    <string name="error_username_too_short">Username must be at least 3 characters</string>
-    <string name="error_password_required">Password is required</string>
-    <string name="error_password_too_short">Password must be at least 6 characters</string>
-    <string name="error_confirm_password_required">Please confirm your password</string>
-    <string name="error_passwords_do_not_match">Passwords do not match</string>
-    <string name="error_invalid_credentials">Invalid username or password</string>
-    <string name="error_username_exists">Username already exists</string>
-    <string name="error_session_expired">Session expired. Please login again.</string>
-
-    <!-- Expenses -->
-    <string name="expenses">Expenses</string>
-    <string name="add_expense">Add Expense</string>
-    <string name="edit_expense">Edit Expense</string>
-    <string name="delete_expense">Delete Expense</string>
-    <string name="expense_details">Expense Details</string>
-    <string name="no_expenses">No expenses yet</string>
-    <string name="tap_add_to_create_expense">Tap the + button to add your first expense</string>
-
-    <!-- Expense Fields -->
-    <string name="category">Category</string>
-    <string name="description">Description</string>
-    <string name="amount">Amount</string>
-    <string name="date">Date</string>
-    <string name="notes_optional">Notes (optional)</string>
-    <string name="select_date">Select date</string>
-    <string name="expense_icon">Expense icon</string>
-
-    <!-- Expense Messages -->
-    <string name="expense_added">Expense added successfully</string>
-    <string name="expense_updated">Expense updated successfully</string>
-    <string name="expense_deleted">Expense deleted</string>
-    <string name="undo">Undo</string>
-
-    <!-- Error Messages - Expenses -->
-    <string name="error_description_required">Description is required</string>
-    <string name="error_amount_required">Amount is required</string>
-    <string name="error_amount_must_be_positive">Amount must be greater than zero</string>
-    <string name="error_invalid_amount">Invalid amount format</string>
-    <string name="error_loading_expenses">Error loading expenses</string>
-    <string name="error_adding_expense">Error adding expense</string>
-    <string name="error_updating_expense">Error updating expense</string>
-    <string name="error_deleting_expense">Error deleting expense</string>
-    <string name="error_saving_expense">Error saving expense</string>
-
-    <!-- Filters -->
-    <string name="filter_by_category">Filter by category</string>
-    <string name="filter_by_date">Filter by date</string>
-    <string name="select_start_date">Select start date</string>
-    <string name="select_end_date">Select end date</string>
-    <string name="clear_filters">Clear filters</string>
-
-    <!-- Budget (Phase 3) -->
-    <string name="budget">Budget</string>
-    <string name="budgets">Budgets</string>
-    <string name="add_budget">Add Budget</string>
-    <string name="set_budget">Set Budget</string>
-    <string name="edit_budget">Edit Budget</string>
-    <string name="delete_budget">Delete Budget</string>
-    <string name="budget_amount">Budget Amount</string>
-    <string name="threshold_percent">Warning Threshold (%)</string>
-    <string name="threshold_helper">Alert when budget reaches this percentage (default 80%)</string>
-    <string name="overall_budget_summary">Overall Budget Summary</string>
-    <string name="total_budget">Total Budget</string>
-    <string name="total_spent">Total Spent</string>
-    <string name="progress">Progress</string>
-    <string name="budget_by_category">Budget by Category</string>
-    <string name="delete_icon">🗑️</string>
-
-    <!-- Budget Messages -->
-    <string name="budget_created">Budget created successfully</string>
-    <string name="budget_updated">Budget updated successfully</string>
-    <string name="budget_deleted">Budget deleted</string>
-    <string name="confirm_delete_budget">Are you sure you want to delete this budget?</string>
-
-    <!-- Budget Errors -->
-    <string name="error_budget_limit_required">Budget limit is required</string>
-    <string name="error_budget_limit_positive">Budget limit must be greater than zero</string>
-    <string name="error_invalid_threshold">Invalid threshold value</string>
-    <string name="error_threshold_range">Threshold must be between 0 and 100</string>
-    <string name="error_loading_budgets">Error loading budgets</string>
-    <string name="error_creating_budget">Error creating budget</string>
-    <string name="error_updating_budget">Error updating budget</string>
-    <string name="error_deleting_budget">Error deleting budget</string>
-
-    <!-- Notifications (Phase 3) -->
-    <string name="budget_warning">Budget Warning</string>
-    <string name="budget_threshold_message">Your %1$s budget has reached %2$d%% of the limit</string>
-    <string name="recurring_expense_added">Recurring Expense Added</string>
-    <string name="recurring_expense_message">A recurring %1$s expense was automatically added</string>
+    <string name="version_info">Version 1.0 - Phase 0</string>
 
     <!-- Common Actions -->
     <string name="ok">OK</string>
@@ -128,46 +13,14 @@
     <string name="edit">Edit</string>
     <string name="add">Add</string>
     <string name="close">Close</string>
-    <string name="back">Back</string>
 
     <!-- Common Labels -->
     <string name="loading">Loading…</string>
     <string name="error">Error</string>
     <string name="success">Success</string>
-    <string name="warning">Warning</string>
-    <string name="info">Information</string>
 
-    <!-- Placeholders for future phases -->
-    <string name="expense">Expense</string>
-    <string name="reports">Reports</string>
-    <string name="settings">Settings</string>
-    <string name="overview">Overview</string>
-    <string name="go_to_expenses">Go to Expenses</string>
-    <string name="manage_budgets">Manage Budgets</string>
-
-    <!-- Expense Categories Array -->
-    <string-array name="expense_categories">
-        <item>All</item>
-        <item>Food</item>
-        <item>Transport</item>
-        <item>Shopping</item>
-        <item>Entertainment</item>
-        <item>Bills</item>
-        <item>Healthcare</item>
-        <item>Education</item>
-        <item>Other</item>
-    </string-array>
-
-    <!-- Expense Categories (without "All" for add/edit) -->
-    <string-array name="expense_categories_no_all">
-        <item>Food</item>
-        <item>Transport</item>
-        <item>Shopping</item>
-        <item>Entertainment</item>
-        <item>Bills</item>
-        <item>Healthcare</item>
-        <item>Education</item>
-        <item>Other</item>
-    </string-array>
-
+    <!-- Placeholder strings for future phases -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
 </resources>
