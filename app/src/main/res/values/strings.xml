@@ -3,7 +3,10 @@
     <!-- App Identity -->
     <string name="app_name">CampusExpense Manager</string>
     <string name="welcome_message">Welcome to CampusExpense Manager</string>
-    <string name="version_info">Version 1.0 - Phase 3</string>
+    <string name="version_info">Version 1.0 - Phase 4</string>
+
+    <string name="go_to_expenses">Go to Expenses</string>
+    <string name="manage_budgets">Manage Budgets</string>
 
     <!-- Authentication -->
     <string name="login">Login</string>
@@ -120,6 +123,30 @@
     <string name="recurring_expense_added">Recurring Expense Added</string>
     <string name="recurring_expense_message">A recurring %1$s expense was automatically added</string>
 
+    <!-- Overview & Reports (Phase 4) -->
+    <string name="overview">Overview</string>
+    <string name="reports">Reports</string>
+    <string name="report_detail">Report Detail</string>
+    <string name="total_spending">Total Spending</string>
+    <string name="spending_by_category">Spending by Category</string>
+    <string name="spending_distribution_chart">Pie chart showing spending distribution by category</string>
+    <string name="export_csv">Export CSV</string>
+    <string name="refresh">Refresh</string>
+    <string name="csv_exported">CSV report exported successfully</string>
+    <string name="no_data_to_export">No data to export</string>
+    <string name="error_loading_overview">Error loading overview data</string>
+    <string name="error_loading_report">Error loading report data</string>
+    <string name="error_exporting_csv">Error exporting CSV report</string>
+
+    <!-- Report Ranges -->
+    <string-array name="report_ranges">
+        <item>Today</item>
+        <item>Week</item>
+        <item>Month</item>
+        <item>Year</item>
+        <item>Custom</item>
+    </string-array>
+
     <!-- Common Actions -->
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
@@ -139,11 +166,7 @@
 
     <!-- Placeholders for future phases -->
     <string name="expense">Expense</string>
-    <string name="reports">Reports</string>
     <string name="settings">Settings</string>
-    <string name="overview">Overview</string>
-    <string name="go_to_expenses">Go to Expenses</string>
-    <string name="manage_budgets">Manage Budgets</string>
 
     <!-- Expense Categories Array -->
     <string-array name="expense_categories">
