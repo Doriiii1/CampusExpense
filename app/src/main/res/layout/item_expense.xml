@@ -25,9 +25,9 @@
             android:layout_height="48dp"
             android:src="@drawable/ic_placeholder_list"
             android:contentDescription="@string/expense_icon"
+            android:tint="@color/primary"
             android:padding="8dp"
-            android:background="@color/primary_container"
-            app:tint="@color/primary" />
+            android:background="@color/primary_container" />
 
         <!-- Expense Details -->
         <LinearLayout
