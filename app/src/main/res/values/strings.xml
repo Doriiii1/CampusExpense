@@ -3,10 +3,7 @@
     <!-- App Identity -->
     <string name="app_name">CampusExpense Manager</string>
     <string name="welcome_message">Welcome to CampusExpense Manager</string>
-    <string name="version_info">Version 1.0 - Phase 4</string>
-
-    <string name="go_to_expenses">Go to Expenses</string>
-    <string name="manage_budgets">Manage Budgets</string>
+    <string name="version_info">Version 1.0 - Phase 5</string>
 
     <!-- Authentication -->
     <string name="login">Login</string>
@@ -146,6 +143,21 @@
         <item>Year</item>
         <item>Custom</item>
     </string-array>
+
+    <!-- Accessibility (Phase 5) -->
+    <string name="view_expenses_desc">View and manage your expenses</string>
+    <string name="manage_budgets_desc">Manage your spending budgets</string>
+    <string name="view_overview_desc">View spending overview and reports</string>
+    <string name="select_category">Select expense category</string>
+    <string name="expense_date">Expense date</string>
+    <string name="cancel_expense">Cancel and discard changes</string>
+    <string name="save_expense">Save expense</string>
+    <string name="select_date_range">Select date range for filtering</string>
+    <string name="expense_list_desc">List of your expenses</string>
+    <string name="budget_list_desc">List of your budgets</string>
+    <string name="total_budget_amount_desc">Total budget amount across all categories</string>
+    <string name="total_spent_amount_desc">Total amount spent across all categories</string>
+    <string name="overall_progress_desc">Overall budget progress percentage</string>
 
     <!-- Common Actions -->
     <string name="ok">OK</string>
