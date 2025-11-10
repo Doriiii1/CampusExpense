@@ -14,14 +14,7 @@
         android:orientation="vertical">
 
         <!-- Toolbar -->
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/primary"
-            android:elevation="4dp"
-            app:title="@string/expenses"
-            app:titleTextColor="@color/on_primary" />
+        <include layout="@layout/include_toolbar" />
 
         <!-- Filters -->
         <LinearLayout
@@ -39,7 +32,9 @@
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/dotted_border"
-                android:padding="12dp" />
+                android:padding="12dp"
+                android:minHeight="48dp"
+                android:contentDescription="@string/filter_by_category" />
 
             <TextView
                 android:id="@+id/textDateFilter"
@@ -55,7 +50,9 @@
                 android:drawablePadding="8dp"
                 android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
                 android:clickable="true"
-                android:focusable="true" />
+                android:focusable="true"
+                android:minHeight="48dp"
+                android:contentDescription="@string/select_date_range" />
 
         </LinearLayout>
 
@@ -67,6 +64,7 @@
             android:layout_weight="1"
             android:padding="8dp"
             android:clipToPadding="false"
+            android:contentDescription="@string/expense_list_desc"
             tools:listitem="@layout/item_expense" />
 
         <!-- Empty State -->
@@ -92,3 +90,14 @@
         app:tint="@color/on_primary" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--
+        NOTE FOR DEVELOPERS:
+        To enable toolbar functionality, add this to ExpenseListActivity.onCreate():
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+    -->
