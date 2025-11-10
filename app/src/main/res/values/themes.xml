@@ -51,6 +51,29 @@
         <item name="materialButtonStyle">@style/Widget.CampusExpense.Button.Primary</item>
         <item name="textInputStyle">@style/Widget.CampusExpense.TextInputLayout</item>
         <item name="materialCardViewStyle">@style/Widget.CampusExpense.Card</item>
+
+        <!-- Accessibility -->
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <!-- Toolbar Theme -->
+    <style name="ToolbarTheme" parent="ThemeOverlay.Material3.Dark">
+        <item name="colorOnSurface">@color/on_primary</item>
+        <item name="colorControlNormal">@color/on_primary</item>
+        <item name="android:textColorPrimary">@color/on_primary</item>
+    </style>
+
+    <!-- High Contrast Theme (Accessibility) -->
+    <style name="Theme.CampusExpense.HighContrast" parent="Theme.CampusExpense">
+        <item name="colorPrimary">@color/high_contrast_primary</item>
+        <item name="colorOnPrimary">@color/high_contrast_on_primary</item>
+        <item name="colorSurface">@color/high_contrast_surface</item>
+        <item name="colorOnSurface">@color/high_contrast_on_surface</item>
+        <item name="colorOutline">@color/high_contrast_outline</item>
+
+        <!-- Increase touch target sizes -->
+        <item name="minTouchTargetSize">48dp</item>
+        <item name="buttonStyle">@style/Widget.CampusExpense.Button.Primary</item>
     </style>
 
 </resources>
