@@ -28,12 +28,26 @@
         <item name="android:textAllCaps">false</item>
     </style>
 
+    <!-- Rounded Button (Phase 5) -->
+    <style name="RoundedButton" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/on_primary</item>
+        <item name="cornerRadius">24dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:paddingHorizontal">32dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
     <!-- EditText Styles -->
     <style name="Widget.CampusExpense.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
         <item name="boxStrokeColor">@color/primary</item>
         <item name="boxStrokeWidth">2dp</item>
         <item name="hintTextColor">@color/primary</item>
         <item name="android:textColorHint">@color/on_surface_variant</item>
+        <item name="android:minHeight">48dp</item>
     </style>
 
     <!-- Text Styles -->

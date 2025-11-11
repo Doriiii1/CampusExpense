@@ -56,19 +56,19 @@
             <!-- Username Field -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layoutUsername"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/username"
-                app:boxStrokeColor="@color/primary"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+                app:boxStrokeColor="@color/primary">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
                     android:inputType="text"
-                    android:maxLines="1"
-                    android:imeOptions="actionNext" />
+                    android:maxLines="1" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,12 +89,14 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/editPassword"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:hint="@string/password"
+                        android:imeOptions="actionDone"
                         android:inputType="textPassword"
                         android:maxLines="1"
-                        android:paddingEnd="48dp"
-                        android:imeOptions="actionDone" />
+                        android:paddingEnd="48dp" />
 
                     <ImageButton
                         android:id="@+id/btnTogglePassword"
@@ -104,7 +106,7 @@
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:src="@drawable/ic_eye_off"
                         android:contentDescription="@string/toggle_password_visibility"
-                        android:tint="@color/on_surface_variant" />
+                        app:tint="@color/on_surface_variant" />
 
                 </FrameLayout>
 

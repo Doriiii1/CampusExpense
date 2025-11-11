@@ -111,7 +111,7 @@
                             android:background="?attr/selectableItemBackgroundBorderless"
                             android:src="@drawable/ic_eye_off"
                             android:contentDescription="@string/toggle_password_visibility"
-                            android:tint="@color/on_surface_variant" />
+                            app:tint="@color/on_surface_variant" />
 
                     </FrameLayout>
 
@@ -149,7 +149,7 @@
                             android:background="?attr/selectableItemBackgroundBorderless"
                             android:src="@drawable/ic_eye_off"
                             android:contentDescription="@string/toggle_password_visibility"
-                            android:tint="@color/on_surface_variant" />
+                            app:tint="@color/on_surface_variant" />
 
                     </FrameLayout>
 

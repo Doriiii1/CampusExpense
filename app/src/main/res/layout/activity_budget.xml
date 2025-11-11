@@ -14,14 +14,7 @@
         android:orientation="vertical">
 
         <!-- Toolbar -->
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/primary"
-            android:elevation="4dp"
-            app:title="@string/budgets"
-            app:titleTextColor="@color/on_primary" />
+        <include layout="@layout/include_toolbar" />
 
         <!-- Overall Summary Card -->
         <com.google.android.material.card.MaterialCardView
@@ -43,7 +36,8 @@
                     android:text="@string/overall_budget_summary"
                     android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
                     android:textColor="@color/on_surface"
-                    android:layout_marginBottom="16dp" />
+                    android:layout_marginBottom="16dp"
+                    android:importantForAccessibility="yes" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -61,7 +55,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/total_budget"
                             android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
-                            android:textColor="@color/on_surface_variant" />
+                            android:textColor="@color/on_surface_variant"
+                            android:importantForAccessibility="no" />
 
                         <TextView
                             android:id="@+id/textTotalBudget"
@@ -70,6 +65,7 @@
                             android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
                             android:textColor="@color/primary"
                             android:textStyle="bold"
+                            android:contentDescription="@string/total_budget_amount_desc"
                             tools:text="$500.00" />
 
                     </LinearLayout>
@@ -85,7 +81,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/total_spent"
                             android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
-                            android:textColor="@color/on_surface_variant" />
+                            android:textColor="@color/on_surface_variant"
+                            android:importantForAccessibility="no" />
 
                         <TextView
                             android:id="@+id/textTotalSpent"
@@ -94,6 +91,7 @@
                             android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
                             android:textColor="@color/error"
                             android:textStyle="bold"
+                            android:contentDescription="@string/total_spent_amount_desc"
                             tools:text="$350.00" />
 
                     </LinearLayout>
@@ -110,7 +108,8 @@
                             android:layout_height="wrap_content"
                             android:text="@string/progress"
                             android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
-                            android:textColor="@color/on_surface_variant" />
+                            android:textColor="@color/on_surface_variant"
+                            android:importantForAccessibility="no" />
 
                         <TextView
                             android:id="@+id/textOverallProgress"
@@ -119,6 +118,7 @@
                             android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
                             android:textColor="@color/success_green"
                             android:textStyle="bold"
+                            android:contentDescription="@string/overall_progress_desc"
                             tools:text="70%" />
 
                     </LinearLayout>
@@ -138,7 +138,8 @@
             android:layout_marginBottom="8dp"
             android:text="@string/budget_by_category"
             android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
-            android:textColor="@color/on_surface" />
+            android:textColor="@color/on_surface"
+            android:importantForAccessibility="yes" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerBudgets"
@@ -147,6 +148,7 @@
             android:layout_weight="1"
             android:padding="8dp"
             android:clipToPadding="false"
+            android:contentDescription="@string/budget_list_desc"
             tools:listitem="@layout/item_budget" />
 
     </LinearLayout>
@@ -163,3 +165,14 @@
         app:tint="@color/on_primary" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--
+        NOTE FOR DEVELOPERS:
+        To enable toolbar functionality, add this to BudgetActivity.onCreate():
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+    -->
