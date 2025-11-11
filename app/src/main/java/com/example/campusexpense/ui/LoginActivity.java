@@ -1,5 +1,6 @@
 package com.example.campusexpense.ui;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
@@ -111,6 +112,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void attemptLogin() {
+        hideKeyboard();
         String username = editUsername.getText().toString().trim();
         String password = editPassword.getText().toString();
 
@@ -171,5 +173,13 @@ public class LoginActivity extends AppCompatActivity {
         super.onDestroy();
         // Clean up resources
         authManager = null;
+    }
+
+    private void hideKeyboard() {
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            android.view.inputmethod.InputMethodManager imm = (android.view.inputmethod.InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 }

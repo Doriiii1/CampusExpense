@@ -119,6 +119,7 @@
     <string name="budget_threshold_message">Your %1$s budget has reached %2$d%% of the limit</string>
     <string name="recurring_expense_added">Recurring Expense Added</string>
     <string name="recurring_expense_message">A recurring %1$s expense was automatically added</string>
+    <string name="recurring_processed">Processed %1$d recurring expense(s)</string>
 
     <!-- Overview & Reports (Phase 4) -->
     <string name="overview">Overview</string>

@@ -7,12 +7,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,6 +24,7 @@ import com.example.campusexpense.db.DatabaseHelper;
 import com.example.campusexpense.model.Budget;
 import com.example.campusexpense.model.Expense;
 import com.example.campusexpense.notifications.NotificationHelper;
+import com.github.mikephil.charting.BuildConfig;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import java.text.SimpleDateFormat;
@@ -33,14 +36,14 @@ import java.util.Locale;
 /**
  * ExpenseListActivity - Displays list of expenses with CRUD operations
  * Phase 2: RecyclerView with swipe-to-delete and filters
- *
+ * <p>
  * Features:
  * - RecyclerView with custom adapter
  * - Swipe-to-delete with UNDO via Snackbar
  * - Filter by category and date range
  * - FloatingActionButton to add new expenses
  * - Empty state when no expenses
- *
+ * <p>
  * Lifecycle: Refreshes list on resume to show updated data
  */
 public class ExpenseListActivity extends AppCompatActivity {
@@ -63,11 +66,18 @@ public class ExpenseListActivity extends AppCompatActivity {
     private String currentCategory = "All";
     private long startDateFilter = 0;
     private long endDateFilter = 0;
+    Button btnSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        UiUtils.stylePrimaryButton(btnSave);
         setContentView(R.layout.activity_expense_list);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         // Initialize managers
         authManager = new AuthManager(this);
@@ -339,6 +349,8 @@ public class ExpenseListActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        UiUtils.dumpPerformanceHints(this);
+        if (BuildConfig.DEBUG) UiUtils.dumpPerformanceHints(this);
         // Update session timestamp
         authManager.updateLastActivityTimestamp();
         // Reload expenses in case data changed

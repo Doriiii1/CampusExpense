@@ -11,6 +11,8 @@ import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
+
+import com.example.campusexpense.R;
 import com.example.campusexpense.db.DatabaseHelper;
 import com.example.campusexpense.model.Expense;
 import com.example.campusexpense.model.RecurringExpense;
@@ -21,14 +23,14 @@ import java.util.concurrent.TimeUnit;
 /**
  * RecurringManager - Manages recurring expense generation
  * Phase 3: WorkManager-based scheduling
- *
+ * <p>
  * Features:
  * - Periodic check for due recurring expenses
  * - Automatic expense insertion
  * - Next run calculation and update
  * - End date handling
  * - Testing hook for manual execution
- *
+ * <p>
  * Choice: WorkManager (preferred over AlarmManager)
  * Rationale:
  * - Battery-efficient with doze mode support
@@ -36,7 +38,7 @@ import java.util.concurrent.TimeUnit;
  * - No need for exact timing (daily check is sufficient)
  * - Built-in retry and backoff
  * - Easier testing and debugging
- *
+ * <p>
  * Security: No sensitive data in logs, user-isolated operations
  */
 public class RecurringManager {
@@ -104,7 +106,7 @@ public class RecurringManager {
             long now = System.currentTimeMillis();
             int processedCount = processRecurringExpenses(context, now);
 
-            String message = "Processed " + processedCount + " recurring expense(s)";
+            String message = context.getString(R.string.recurring_processed, processedCount);
             Toast.makeText(context, message, Toast.LENGTH_LONG).show();
             Log.d(TAG, message);
 

@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.campusexpense.notifications.NotificationHelper;
 import com.example.campusexpense.schedule.RecurringManager;
 import com.example.campusexpense.ui.BudgetActivity;
 import com.example.campusexpense.ui.ExpenseListActivity;
+import com.example.campusexpense.ui.OverviewActivity;
 
 /**
  * MainActivity - Launch activity for CampusExpense Manager
@@ -25,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         // Phase 0: Simple welcome screen
         // Phase 2: Add navigation to ExpenseListActivity
         Button btnExpenses = findViewById(R.id.btnExpenses);
@@ -37,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
         Button btnBudgets = findViewById(R.id.btnBudgets);
         btnBudgets.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, BudgetActivity.class);
+            startActivity(intent);
+        });
+
+        Button btnOverview = findViewById(R.id.btnOverview);
+        btnOverview.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, OverviewActivity.class);
             startActivity(intent);
         });
 

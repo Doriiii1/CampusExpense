@@ -9,10 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.campusexpense.R;
 import com.example.campusexpense.model.Expense;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 
 public class ReportExpenseAdapter extends RecyclerView.Adapter<ReportExpenseAdapter.ViewHolder> {
 
@@ -38,7 +40,8 @@ public class ReportExpenseAdapter extends RecyclerView.Adapter<ReportExpenseAdap
         holder.textCategory.setText(expense.getCategory());
         holder.textDescription.setText(expense.getDescription());
         holder.textAmount.setText(String.format("$%.2f", expense.getAmount()));
-        holder.textDate.setText((int) expense.getDate());  // Format as needed
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault());
+        holder.textDate.setText(sdf.format(expense.getDate()));  // Format as needed
         // Thêm % budget nếu cần: holder.textBudgetPercent.setText(calculatePercent(expense));
     }
 

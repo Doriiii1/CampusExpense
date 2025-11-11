@@ -38,6 +38,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 2; // Phase 3: Incremented from 1 to 2
 
     // Table names
+    private static DatabaseHelper instance;
     private static final String TABLE_EXPENSES = "expenses";
     private static final String TABLE_BUDGETS = "budgets";
     private static final String TABLE_RECURRING = "recurring_expenses";
@@ -109,6 +110,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     COLUMN_RECURRING_FREQ + " TEXT NOT NULL, " +
                     COLUMN_RECURRING_NEXT + " INTEGER NOT NULL" +
                     ")";
+
+    public static synchronized DatabaseHelper getInstance(Context context) {
+        if (instance == null) {
+            instance = new DatabaseHelper(context.getApplicationContext());
+        }
+        return instance;
+    }
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
